@@ -1,11 +1,14 @@
 // Variables declaration
+const colorPalette = document.querySelector('#color-palette');
 const paletaDeCores = ['black', 'red', 'blue', 'green'];
 const colors = document.querySelectorAll('.color');
 const pixelLinesColumns = 5;
 const pixelBoard = document.querySelector('#pixel-board');
 let selected = document.querySelector('.color');
-let selectedColor = getComputedStyle(selected).backgroundColor;
+let selectedColor = 'rgb(0,0,0)';
 // Variables declaration
+selected.className = 'color selected';
+
 for (let index = 0; index < paletaDeCores.length; index += 1) {
   colors[index].style.backgroundColor = paletaDeCores[index];
 }
@@ -24,4 +27,20 @@ function pixels() {
 }
 pixels();
 
-selected.className = 'color selected';
+colorPalette.addEventListener('click', function (event) {
+  if (event.target != colorPalette) {
+    for (let index of colors) {
+      index.className = 'color';
+    }
+    selected = event.target;
+    selected.className = 'color selected';
+    selectedColor = getComputedStyle(selected).backgroundColor;
+
+  }
+})
+
+pixelBoard.addEventListener('click', function (event) {
+    if(event.target != pixelBoard) {
+      event.target.style.backgroundColor = selectedColor; 
+  }
+})

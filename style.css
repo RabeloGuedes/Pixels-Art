@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(100,100,100);
+}
 /* General Settings */
 
 /* Main Settings */
@@ -22,6 +26,7 @@
   height: 80px;
   border: 1px solid black;
   display: inline-block;
+  cursor: pointer;
 }
 
 .green {
@@ -47,8 +52,8 @@
 .pixel-line {
   display: block;
   height: 40px;
-  width: 100%;
-  text-align: center;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .pixel {
@@ -61,7 +66,7 @@
 }
 
 .selected {
-  
+  font-size: 13px;
 }
 
 /* Main Settings */
