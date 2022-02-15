@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(100,100,100);
+  background-color: rgb(133, 133, 133);
 }
 /* General Settings */
 
@@ -67,6 +67,18 @@ body {
 
 .selected {
   font-size: 13px;
+}
+
+#clear-board {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgb(117, 37, 209);
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  display: block;
+  margin: 20px auto 0;
 }
 
 /* Main Settings */

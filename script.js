@@ -4,8 +4,10 @@ const paletaDeCores = ['black', 'red', 'blue', 'green'];
 const colors = document.querySelectorAll('.color');
 const pixelLinesColumns = 5;
 const pixelBoard = document.querySelector('#pixel-board');
+const buttonContainer = document.querySelector('#button-container');
 let selected = document.querySelector('.color');
 let selectedColor = 'rgb(0,0,0)';
+let clearButton = document.createElement('button');
 // Variables declaration
 selected.className = 'color selected';
 
@@ -42,5 +44,16 @@ colorPalette.addEventListener('click', function (event) {
 pixelBoard.addEventListener('click', function (event) {
     if(event.target != pixelBoard) {
       event.target.style.backgroundColor = selectedColor; 
+  }
+})
+
+clearButton.id ='clear-board';
+clearButton.innerText = 'Limpar';
+buttonContainer.append(clearButton);
+
+clearButton.addEventListener('click',function () {
+  const pixels = document.getElementsByClassName('pixel');
+  for (let pixel of pixels) {
+    pixel.style.backgroundColor = 'white';
   }
 })
