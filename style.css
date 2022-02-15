@@ -7,12 +7,21 @@
 /* General Settings */
 
 /* Main Settings */
+#title {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#color-palette {
+  text-align: center;
+  margin-top: 20px;
+}
+
 .color {
   width: 80px;
   height: 80px;
   border: 1px solid black;
   display: inline-block;
-  border-collapse: collapse;
 }
 
 .green {
