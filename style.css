@@ -7,6 +7,7 @@
 
 body {
   background-color: rgb(133, 133, 133);
+  text-align: center;
 }
 /* General Settings */
 
@@ -52,7 +53,6 @@ body {
 .pixel-line {
   display: block;
   height: 40px;
-  width: 200px;
   margin: 0 auto;
 }
 
@@ -69,6 +69,10 @@ body {
   font-size: 13px;
 }
 
+#button-container {
+  text-align: center;
+}
+
 #clear-board {
   padding: 10px 20px;
   border-radius: 5px;
@@ -77,8 +81,29 @@ body {
   font-weight: bold;
   letter-spacing: 2px;
   color: white;
-  display: block;
-  margin: 20px auto 0;
+  display: inline-block;
+  margin: 20px;
+}
+
+#board-size {
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+  padding: 7px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+#generate-board {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: rgb(209, 37, 80);
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  display: inline-block;
+  margin: 20px;
 }
 
 /* Main Settings */
