@@ -10,11 +10,27 @@ const pixelInput = document.createElement('input');
 let selected = document.querySelector('.color');
 let selectedColor = 'rgb(0,0,0)';
 let clearButton = document.createElement('button');
+let list = [];
+// Source : https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
 // Variables declaration
 selected.className = 'color selected';
 
+function randomList() {
+  let list = [];
+  for (let index = 0; index < paletaDeCores.length; index += 1) {
+    let aleatorio = (Math.random() * paletaDeCores.length).toFixed();
+    aleatorio = Number(aleatorio);
+    if (!list.includes(aleatorio)) {
+      list.push(aleatorio);
+    }
+  }
+  return list;
+}
+
+list = randomList();
+
 for (let index = 0; index < paletaDeCores.length; index += 1) {
-  colors[index].style.backgroundColor = paletaDeCores[index];
+    colors[index].style.backgroundColor = paletaDeCores[index];
 }
 
 function pixels() {
