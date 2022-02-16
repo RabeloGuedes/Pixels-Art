@@ -63,7 +63,7 @@ clearButton.addEventListener('click',function () {
 pixelInput.id = 'board-size';
 pixelInput.setAttribute('type', 'number');
 pixelInput.setAttribute('min', '1');
-pixelInput.setAttribute('max', '100');
+pixelInput.setAttribute('max', '50');
 addButton.id = 'generate-board';
 addButton.innerText = 'VQV';
 buttonContainer.append(pixelInput);
@@ -77,7 +77,12 @@ addButton.addEventListener('click', function (){
       pixelBoard = document.createElement('section');
       pixelBoard.id = 'pixel-board';
       document.body.appendChild(pixelBoard);
-      for(let index = 0; index < pixelInput.value; index += 1) {
+      if (pixelInput.value < 5) {
+        pixelInput.value = 5;
+      }
+      else if (pixelInput.value > 50) {
+        pixelInput.value = 50;
+      } for(let index = 0; index < pixelInput.value; index += 1) {
         const pixelLine = document.createElement('div');
         pixelLine.className = 'pixel-line';
         pixelBoard.appendChild(pixelLine);
@@ -94,3 +99,5 @@ addButton.addEventListener('click', function (){
     }
     })
 })
+
+
