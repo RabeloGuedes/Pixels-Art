@@ -1,6 +1,6 @@
 // Variables declaration
 const colorPalette = document.querySelector('#color-palette');
-const paletaDeCores = ['black', 'red', 'blue', 'green'];
+let paletaDeCores = ['black', 'red', 'blue', 'green'];
 const colors = document.querySelectorAll('.color');
 const pixelLinesColumns = 5;
 let pixelBoard = document.querySelector('#pixel-board');
@@ -15,23 +15,23 @@ let list = [];
 // Variables declaration
 selected.className = 'color selected';
 
-function randomList() {
-  let list = [];
-  for (let index = 0; index < paletaDeCores.length; index += 1) {
-    let aleatorio = (Math.random() * paletaDeCores.length).toFixed();
-    aleatorio = Number(aleatorio);
-    if (!list.includes(aleatorio)) {
-      list.push(aleatorio);
-    }
+function randomColor() {
+  let color = [];
+  for (let index = 0; index < 3; index += 1) {
+    color.push(Math.floor(Math.random() * 256)); 
   }
-  return list;
+ return color;
 }
 
-list = randomList();
-
-for (let index = 0; index < paletaDeCores.length; index += 1) {
-    colors[index].style.backgroundColor = paletaDeCores[index];
+for (let index = 0; index < colors.length; index += 1) {
+  if (index === 0) {
+    colors[index].style.backgroundColor = 'rgb(0, 0, 0)';
+  } else {
+    let color = randomColor();
+    colors[index].style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+  }
 }
+
 
 function pixels() {
   for (let index = 0; index < pixelLinesColumns; index += 1) {
