@@ -11,6 +11,7 @@ let selected = document.querySelector('.color');
 let selectedColor = 'rgb(0,0,0)';
 let clearButton = document.createElement('button');
 let list = [];
+const generateColor = document.createElement('button');
 // Source : https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
 // Variables declaration
 selected.className = 'color selected';
@@ -116,4 +117,14 @@ addButton.addEventListener('click', function (){
     })
 })
 
+generateColor.innerText = 'Gerar cor';
+generateColor.id = 'generate-color';
+buttonContainer.appendChild(generateColor);
 
+generateColor.addEventListener('click', function (event) {
+  let newColor = document.createElement('div');
+  newColor.className = 'color';
+  let color = randomColor();
+  newColor.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+  colorPalette.appendChild(newColor);
+})
