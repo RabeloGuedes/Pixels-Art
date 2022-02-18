@@ -128,3 +128,6 @@ generateColor.addEventListener('click', function (event) {
   newColor.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
   colorPalette.appendChild(newColor);
 })
+
+
+
