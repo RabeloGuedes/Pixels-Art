@@ -1,4 +1,4 @@
-# Português
+# Português 🇧🇷🇵🇹
 
 <details>
   <summary>
@@ -55,7 +55,7 @@ Projeto da [Trybe](https://www.betrybe.com/) - Bloco 5 - Aplicação para constr
 
 </details>
 
-# English
+# English 🇺🇸🇬🇧
 
 <details>
   <summary>
@@ -112,7 +112,7 @@ Project from [Trybe](https://www.betrybe.com/) - Block 5 - Application to build 
 
 </details>
 
-# Deutsch
+# Deutsch 🇩🇪
 
 <details>
   <summary>
